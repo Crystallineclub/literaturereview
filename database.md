@@ -1,5 +1,4 @@
----
 title: Database
----
-description: click here to download the database files to incorporate into your preferred reference manager. 
----
+You can download the database for use in reference managers here:
+
+[Download BibTex](references.html)
