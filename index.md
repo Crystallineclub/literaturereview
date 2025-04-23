@@ -9,5 +9,5 @@ The Crystalline Rock Chemistry (CrysChem) database, presented by the Crystalline
 
 # [Database](./database.html)
 
-# [Contact Us](./contactus.hmtl)
+# [Contact Us](./contactus.html)
 ```
