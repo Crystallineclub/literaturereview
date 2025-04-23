@@ -1,6 +1,7 @@
 click here to download report 
 [Download pdf](EXAMPLE.pdf)
-<!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +32,7 @@ click here to download report
 <p>Below is the preview of the report PDF:</p>
 
 <div class="pdf-container">
-    <iframe src="example.pdf" allow="autoplay"></iframe>
+    <iframe src="EXAMPLE.pdf" allow="autoplay"></iframe>
 </div>
 
 <p>If you have trouble viewing the PDF, you can <a href="example.pdf" download>download it here</a>.</p>
