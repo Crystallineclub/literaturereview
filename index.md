@@ -23,8 +23,11 @@ layout: default
 
     <div id="Report" class="tab-content">
         <h2>Report</h2>
-        <p>Information regarding reports related to the CrysChem database.</p>
-        <a href="./report.html">View Report</a>
+        <p>Below is the preview of the report PDF:</p>
+        <div class="pdf-container">
+            <iframe src="example.pdf" allow="autoplay"></iframe>
+        </div>
+        <p>If you have trouble viewing the PDF, you can <a href="example.pdf" download>download it here</a>.</p>
     </div>
 
     <div id="Database" class="tab-content">
@@ -65,6 +68,18 @@ layout: default
         background-color: #fff;
         border-bottom: 2px solid #007bff; /* Active tab color */
     }
+    .pdf-container {
+        width: 100%;
+        height: 600px; /* Adjust height as needed */
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 </style>
 
 <script>
@@ -87,6 +102,12 @@ layout: default
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
+
+    // Open the first tab by default
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".tab-button").click();
+    });
+</script
 
     // Open the first tab by default
     document.addEventListener("DOMContentLoaded", function() {
