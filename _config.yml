@@ -2,3 +2,5 @@ title: Crystalline Rock Chemistry (CrysChem) Literature Database
 theme: jekyll-theme-cayman
 show_downloads: false
 google_analytics:
+github:
+  is_project_page: false
