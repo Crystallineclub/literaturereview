@@ -35,7 +35,5 @@ click here to download report
     <iframe src="EXAMPLE.pdf" allow="autoplay"></iframe>
 </div>
 
-<p>If you have trouble viewing the PDF, you can <a href="example.pdf" download>download it here</a>.</p>
-
 </body>
 </html>
