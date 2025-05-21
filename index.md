@@ -35,7 +35,7 @@ layout: default
 
     <div id="Contact" class="tab-content">
         <h2>Contact Us</h2>
-        <p>Get in touch for more information or inquiries.</p>
+        <p>Requests, suggested additions, etc.</p>
         <a href="./contactus.html">Contact Information</a>
     </div>
 </div>
