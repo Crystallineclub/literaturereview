@@ -4,7 +4,7 @@ layout: default
 
 <div class="container">
     <h1>Crystalline Rock Chemistry (CrysChem) Database</h1>
-    <p>The Crystalline Rock Chemistry (CrysChem) database, presented by the Crystalline Rock Club (CRC), is a comprehensive BibTeX reference file containing hydrogeochemical data and chemical process models relevant to nuclear waste repositories in crystalline rock. Designed for use with reference manager software, the database includes abstracts, tags for specific data, and excludes full papers, aiming to facilitate the organized and accessible exchange of information crucial for deep geologic repository science.</p>
+    <p>The Crystalline Rock Chemistry (CrysChem) database, presented by the NEA Crystalline Rock Club (CRC), is a BibTeX database of papers, reports, and other literature that contain hydrogeochemical data and chemical process and modeling information relevant to nuclear waste repositories in crystalline rock. Designed for use with freely available reference manager software (e.g., Mendeley, Zotero, JabRef), the CrysChem database includes searchable abstracts, tags for specific topics, and links to full publications. Many of the publications are reports from deep geologic repository research programs around the world. The aim of this database is to facilitate the exchange of information for deep geologic repository science in crystalline rock.</p>
 
     <!-- Tab buttons -->
     <div>
