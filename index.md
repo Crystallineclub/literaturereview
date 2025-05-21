@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="container">
-    <h1>Crystalline Rock Chemistry (CrysChem) Literature Database</h1>
-    <p>The Crystalline Rock Chemistry (CrysChem) literature database, developed and maintained by the NEA Crystalline Rock Club (CRC), is a BibTeX database of papers, reports, and other literature that contain hydrogeochemical data and chemical process and modeling information relevant to nuclear waste repositories in crystalline rock. Designed for use with freely available reference manager software (e.g., Mendeley, Zotero, JabRef), the CrysChem database includes searchable abstracts, tags for specific topics, and links to full publications. Many of the publications are reports from deep geologic repository research programs around the world. The aim of this database is to facilitate the exchange of information for deep geologic repository science in crystalline rock.</p>
+    <h1>Crystalline Rock Chemistry Literature Database (CrysChem)</h1>
+    <p>The Crystalline Rock Chemistry Literature Database (CrysChem), developed and maintained by the NEA Crystalline Rock Club (CRC), is a BibTeX database of papers, reports, and other literature that contain hydrogeochemical data and chemical process and modeling information relevant to nuclear waste repositories in crystalline rock. Designed for use with freely available reference manager software (e.g., Mendeley, Zotero, JabRef), CrysChem includes searchable abstracts, tags for specific topics, and links to full publications. Many of the publications are reports from deep geologic repository research programs around the world. The aim of this database is to facilitate the exchange of information for deep geologic repository science in crystalline rock.</p>
 
     <!-- Tab buttons -->
     <div>
@@ -17,13 +17,13 @@ layout: default
     <!-- Tab content -->
     <div id="About" class="tab-content">
         <h2>About</h2>
-        <p>Details about the CrysChem database and its purpose.</p>
+        <p>Details about CrysChem and its purpose.</p>
         <a href="./another-page.html">Learn more</a>
     </div>
 
     <div id="Report" class="tab-content">
         <h2>Report</h2>
-        <p>Information regarding reports related to the CrysChem database.</p>
+        <p>Information regarding reports related to CrysChem.</p>
         <a href="./report.html">View Report</a>
     </div>
 
