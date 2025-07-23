@@ -7,30 +7,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
         }
-        form {
-            background: white;
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
         }
         input, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
         }
         button {
             background-color: #28a745;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 12px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
         button:hover {
             background-color: #218838;
@@ -38,26 +61,29 @@
         #response-message {
             margin-top: 10px;
             color: green;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<h2>Contact Us</h2>
-<form id="comment-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+<div class="container">
+    <h2>Contact Us</h2>
+    <form id="comment-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="comment">Message:</label>
-    <textarea id="comment" name="comment" rows="5" required></textarea>
+        <label for="comment">Suggestion:</label>
+        <textarea id="comment" name="comment" rows="5" required></textarea>
 
-    <button type="submit">Send Message</button>
-</form>
+        <button type="submit">Send Message</button>
+    </form>
 
-<div id="response-message"></div>
+    <div id="response-message"></div>
+</div>
 
 <script>
     document.getElementById('comment-form').addEventListener('submit', function(event) {
