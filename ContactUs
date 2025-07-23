@@ -35,23 +35,67 @@
         button:hover {
             background-color: #218838;
         }
+        #response-message {
+            margin-top: 10px;
+            color: green;
+        }
     </style>
 </head>
 <body>
 
 <h2>Contact Us</h2>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form id="comment-form">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="comment">Message:</label>
+    <textarea id="comment" name="comment" rows="5" required></textarea>
 
     <button type="submit">Send Message</button>
 </form>
+
+<div id="response-message"></div>
+
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // Replace with your Staticman instance URL
+        const staticmanUrl = 'https://api.staticman.net/v1/entry/crystallineclub/literaturereview/master/comments';
+
+        fetch(staticmanUrl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .then(data => {
+            document.getElementById('response-message').innerText = 'Comment submitted successfully!';
+            document.getElementById('comment-form').reset(); // Reset the form
+        })
+        .catch((error) => {
+            document.getElementById('response-message').innerText = 'Error submitting comment: ' + error.message;
+        });
+    });
+</script>
 
 </body>
 </html>
