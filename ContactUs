@@ -86,40 +86,21 @@
 </div>
 
 <script>
-    document.getElementById('comment-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+    document.getElementById('comment-form').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-        const formData = new FormData(this);
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+        const name = encodeURIComponent(document.getElementById('name').value);
+        const email = encodeURIComponent(document.getElementById('email').value);
+        const comment = encodeURIComponent(document.getElementById('comment').value);
 
-        // Replace with your Staticman instance URL
-        const staticmanUrl = 'https://api.staticman.net/v1/entry/crystallineclub/literaturereview/master/comments';
+        const title = `Contact Form Submission from ${name}`;
+        const body = `**Name:** ${name}%0A**Email:** ${email}%0A**Message:**%0A${comment}`;
 
-        fetch(staticmanUrl, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Network response was not ok.');
-            }
-        })
-        .then(data => {
-            document.getElementById('response-message').innerText = 'Comment submitted successfully!';
-            document.getElementById('comment-form').reset(); // Reset the form
-        })
-        .catch((error) => {
-            document.getElementById('response-message').innerText = 'Error submitting comment: ' + error.message;
-        });
+        const issueUrl = `https://github.com/crystallineclub/literaturereview/issues/new?title=${title}&body=${body}`;
+
+        window.open(issueUrl, '_blank');
+
+        document.getElementById('response-message').innerText = "Redirecting to GitHub to submit your message...";
     });
 </script>
 
